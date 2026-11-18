@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "postinstall": "prisma generate --config prisma7.config.ts",
-    "vercel-build": "prisma generate --config prisma7.config.ts && prisma migrate deploy --config prisma7.config.ts && npm run db:seed && next build",
+    "vercel-build": "node scripts/vercel-build.mjs",
     "db:generate": "prisma generate --config prisma7.config.ts",
     "db:migrate": "prisma migrate dev --config prisma7.config.ts",
     "db:deploy": "prisma migrate deploy --config prisma7.config.ts",
